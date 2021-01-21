@@ -14,7 +14,7 @@ $auth_secret = '';      // This is the Authentication Secret assigned to your ap
 $user_secret = '';      // User needs to generate this secret from his User Profile
 
 // Application Paramertes
-$user_name = 'Support_user';        // The logon user_name in coreERP
+$user_name = '';        // The logon user_name in coreERP
 $coreErpUrl = 'http://172.17.0.4/core-erp/index.php';      // coreERP published site address
         
 // Create a Ghuzzle Client instance and call authentication

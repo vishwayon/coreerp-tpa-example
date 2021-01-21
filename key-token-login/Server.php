@@ -9,9 +9,9 @@
 require '../vendor/autoload.php';
 
 // Never Pass the following variables to the client in HTML or JS. Always retain them securely on the server
-$auth_key = '71faabb1d7b7bf966c0188e0918a87f3';          // This is the Authentication ID assigned to your application
-$auth_secret = 'f035f45bfa3de3dc999476f70df9b790';      // This is the Authentication Secret assigned to your application
-$user_secret = '161ad23e58d55d8065e45c45b3b04fa9';      // User needs to generate this secret from his User Profile
+$auth_key = '';          // This is the Authentication ID assigned to your application
+$auth_secret = '';      // This is the Authentication Secret assigned to your application
+$user_secret = '';      // User needs to generate this secret from his User Profile
 
 // Application Paramertes
 $user_name = 'Support_user';        // The logon user_name in coreERP

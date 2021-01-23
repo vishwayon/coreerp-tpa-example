@@ -3,6 +3,8 @@
 This project contains all the example code required by third party applications to successfully login and open documents/masters in coreERP.
 The minimum supported version of coreERP is required to be branched from dev-bs4.
 
+Run **composer update** to update all dependencies
+
 ## Example 1: Key Token Login (Path: key-token-login)
 
 This example code explains the Automatic login process in coreERP using the Auth-Key, Auth-Secret and User-Secret

@@ -8,7 +8,7 @@ ktl = (window.ktl || {});
 
 (function(ktl) {
     
-    function login() {
+    function login(target) {
         $.ajax({
             url: 'Server.php',
             method: 'GET',
@@ -20,9 +20,14 @@ ktl = (window.ktl || {});
                         'auth-token': result['auth-token'],
                         'core-sessionid': result['core-sessionid'],
                         'doc-type': 'DSP',
-                        'doc-id': '-1' // Or the linked document id that needs to be opened automatically
+                        'doc-id': ($('#doc-id').val() != '' ?  $('#doc-id').val() : '-1'), // Or the linked document id that needs to be opened automatically
+                        'proposal-id': $('#proposal-id').val()
                     });
-                    window.open(uri);
+                    if (target) {
+                        $(target).attr('src', uri);
+                    } else {
+                        window.open(uri);
+                    }
                 } else {
                     alert(result.msg);
                 }

@@ -43,8 +43,11 @@ if ($result['status'] == 'OK') {
     $requestPrint = new \GuzzleHttp\Psr7\Request('GET', '?r=app/get-print' . $qStr);
     try {
         $responsePrint = $client->send($requestPrint);
-        $resultPrint = json_decode($responsePrint->getBody());
-        echo $responsePrint->getBody();
+//        $resultPrint = json_decode($responsePrint, true);
+//        echo json_encode($resultPrint) . PHP_EOL;
+//        
+//         $resultPrint = json_decode($responsePrint->getBody());
+//        echo $responsePrint->getBody();
         
 //        $responsePrint = $client->get('?r=app/get-print', [
 ////            'headers' => [
@@ -58,13 +61,13 @@ if ($result['status'] == 'OK') {
 //            ]
 //        ]);
 ////        $responsePrint = $client->send($requestPrint);
-//        $resultPrint = json_decode($responsePrint->getBody(), true);
+        $resultPrint = json_decode($responsePrint->getBody(), true);
 //        echo json_encode(['sts' => 'print response', 'resp' => json_encode($resultPrint)]) . PHP_EOL;
-//        $rpt = new stdClass();
-//        $rpt->status = 'OK';
-//        $rpt->url = $coreErpUrl;
-//        $rpt->filePath = $resultPrint['ReportRenderedPath'];
-//        echo json_encode($rpt) . PHP_EOL;
+        $rpt = new stdClass();
+        $rpt->status = 'OK';
+        $rpt->url = $coreErpUrl;
+        $rpt->filePath = $resultPrint['rpt'];
+        echo json_encode($rpt) . PHP_EOL;
     } catch (Exception $ex) {
         echo 'exception cought' . PHP_EOL . json_encode(json_decode($ex->getResponse()->getBody()->getContents(), true)) . PHP_EOL;
     }

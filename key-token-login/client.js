@@ -39,22 +39,6 @@ ktl = (window.ktl || {});
     }
     ktl.login = login;
     
-    function print() {
-        $.ajax({
-            url: 'Print.php',
-            method: 'GET',
-            dataType: 'json',
-            data: {'doc-type': 'DSP','doc-id': ($('#doc-id').val() != '' ?  $('#doc-id').val() : '-1')},
-            success: function(result) {
-                console.log(result);
-            },
-            error: function(err) {
-                console.log(err);
-            }
-        })
-    }
-    ktl.print = print;
-    
 } (window.ktl));
 
 

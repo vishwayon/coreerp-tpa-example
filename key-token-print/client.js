@@ -10,7 +10,7 @@ ktp = (window.ktp || {});
 
     function print() {
         $.ajax({
-            url: 'Print.php',
+            url: 'Server.php',
             method: 'GET',
             dataType: 'json',
             data: {'doc-type': 'DSP', 'doc-id': ($('#doc-id').val() != '' ? $('#doc-id').val() : '-1')},

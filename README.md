@@ -13,17 +13,16 @@ It uses the following files:
 1. Server.php   - This contains the server code
 2. Index.html   - The html page served to the client
 3. client.js    - Client javascript to call server and open new window on successful authentication
-4. Print.php    - This contains the print code
 
 
 ## Example 2: Key Token Print (Path: key-token-print)
 
-This example code explains the Automatic login process in coreERP using the Auth-Key, Auth-Secret and User-Secret
+This example code explains the print process in coreERP using the Auth-Key, Auth-Secret and User-Secret
 
 It uses the following files:
+1. Server.php   - This contains the server code for print
 2. Index.html   - The html page served to the client
 3. client.js    - Client javascript to call server and open new window on successful authentication
-4. Print.php    - This contains the print code
 
 ### License
 These examples are licensed under [MIT](https://github.com/vishwayon/coreerp-tpa-example/blob/develop/LICENSE).

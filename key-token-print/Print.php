@@ -16,15 +16,6 @@ $user_secret = '';      // User needs to generate this secret from his User Prof
 $user_name = '';        // The logon user_name in coreERP
 $coreErpUrl = 'http://172.17.0.3/coreerp/index.php';      // coreERP published site address
 
-
-$auth_key = '4ae9254bbf211d6ca434af746a4f9026';          // This is the Authentication ID assigned to your application
-$auth_secret = 'e1891618a18e2b2a06e99c75cbaa0e74';      // This is the Authentication Secret assigned to your application
-$user_secret = '2771179fd18a577cc69bd57eac4d7c0e';      // User needs to generate this secret from his User Profile
-
-// Application Paramertes
-$user_name = 'Support_user';        // The logon user_name in coreERP
-$coreErpUrl = 'http://172.17.0.3/coreerp/index.php';      // coreERP published site address
-
 // Document information 
 $doc_type = filter_input(INPUT_GET, 'doc-type', FILTER_SANITIZE_STRING);
 $doc_id = filter_input(INPUT_GET, 'doc-id', FILTER_SANITIZE_STRING);
